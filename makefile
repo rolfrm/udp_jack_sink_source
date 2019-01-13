@@ -5,7 +5,7 @@ CC = gcc
 TARGET = run
 LIB_OBJECTS =$(LIB_SOURCES:.c=.o)
 LDFLAGS= -L. $(OPT) -Wextra 
-LIBS= -ljack -lm
+LIBS= -ljack -lm -lfftw3f
 ALL= $(TARGET)
 CFLAGS = -Isrc/ -Iinclude/ -std=c11 -c $(OPT) -Wall -Wextra -Werror=implicit-function-declaration -Wformat=0 -D_GNU_SOURCE -fdiagnostics-color -Wextra  -Wwrite-strings -Werror -msse4.2 -Werror=maybe-uninitialized 
 
